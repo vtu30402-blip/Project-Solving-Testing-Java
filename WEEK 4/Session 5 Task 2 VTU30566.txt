@@ -1,20 +1,26 @@
-1. Need for project environment
-2. Reason for the delay in project
-3. Meaning of project 
-4. Brownfield Project
-5. Diff b/w project and operation 
-6. Various goals of project 
-7. Diff types of project with real time example
-8. Uses of WBS
-9. Prevent measure for avoiding project delay
-10. Gantt chart for simple project phase
-11. Various stages of project life cycle
-12. Various component feasibility study
-13. Component of Project Management
-14. Explain 4Ps's in Project Management
-15. Principles of Project Management
-16. Project Triple Constraints
-17. Characteristics of Project 
-18. Skilled required by a successfully in Project Management
-19. Impact of delay in Project Management
-20. Importance of WBS with examples
+import java.util.*;
+
+class Solution {
+    public String[] sortPeople(String[] names, int[] heights) {
+        int n = names.length;
+        Map<Integer, String> map = new TreeMap<>(Collections.reverseOrder());
+        
+        for (int i = 0; i < n; i++) {
+            map.put(heights[i], names[i]);
+        }
+        
+        String[] result = new String[n];
+        int index = 0;
+        for (int height : map.keySet()) {
+            result[index++] = map.get(height);
+        }
+        
+        return result;
+    }
+}
+
+Output:
+names = ["Mary", "John", "Emma"]
+heights = [180,165,170]
+
+["Mary", "Emma", "John"]
